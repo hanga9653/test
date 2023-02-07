@@ -1,4 +1,4 @@
-package board.model;
+package board;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -14,7 +14,7 @@ public class JDBCTemplateDAO {
 	
 	//게시물 카운트
 	public int getTotalCount(Map<String, Object> map) {
-		String sql = "SELECT COUNT(*) FROM pmp ";
+		String sql = "SELECT COUNT(*) FROM QNA ";
 		if(map.get("Word")!= null) {
 			sql +=" WHERE "+ map.get("Column")+" "
 				+" LIKE '%"+map.get("Word")+"%' ";
@@ -25,7 +25,7 @@ public class JDBCTemplateDAO {
 	//게시판 리스트 출력
 	public ArrayList<BoardDTO> list(Map<String, Object> map) {
 		
-		String sql = "SELECT * FROM pmp ";
+		String sql = "SELECT * FROM QNA ";
 		if(map.get("Word")!= null) {
 			sql += " WHERE "+ map.get("Column")+" "
 				+ " LIKE '%"+map.get("Word")+"%' ";

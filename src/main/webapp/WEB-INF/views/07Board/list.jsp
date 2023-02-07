@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +20,8 @@
 					<img src="../images/img_avatar3.png" class="media-object" style="width:60px">
 				</div>
 				<div class="media-body">
-					<h4 class="media-heading">작성자:${row.name }(${row.id })</h4>
-					<p>${row.contents }</p>
+					<h4 class="media-heading">작성자:${row.name }</h4>
+					<p>${row.content }</p>
 				</div>	  
 				<!--  수정,삭제버튼 -->
 				<div class="media-right">

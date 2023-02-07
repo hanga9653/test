@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <html>
@@ -9,7 +11,7 @@
 	test QnA만들어보기
 </h1>
 <li>
-	<a href="mybatis/list.do" target="_blank">
+	<a href="testboard/list.do" target="_blank">
 		test QnA바로가기
 	</a>
 </li>
