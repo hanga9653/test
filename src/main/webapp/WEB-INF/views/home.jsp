@@ -6,9 +6,12 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	test QnA만들어보기
 </h1>
-
-<P>  The time on the server is ${serverTime}. </P>
+<li>
+	<a href="mybatis/list.do" target="_blank">
+		test QnA바로가기
+	</a>
+</li>
 </body>
 </html>

@@ -12,5 +12,4 @@ public class BoardDTO {
 	private String title;
 	private String content;
 	private java.sql.Date postdate;
-	private int virtualNum;
 }

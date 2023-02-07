@@ -136,6 +136,17 @@
 		    <version>1.18.24</version>
 		    <scope>provided</scope>
 		</dependency>
+		<!-- 마이바티스(Mybatis) 의존설정 -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.5.11</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>2.1.0</version>
+		</dependency>
 	</dependencies>
     <build>
         <plugins>
