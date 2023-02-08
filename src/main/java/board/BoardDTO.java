@@ -6,6 +6,7 @@ import lombok.Data;
 public class BoardDTO {
 	private int idx;
 	private String atype;
+	private String id;
 	private String name;
 	private String phone;
 	private String email;

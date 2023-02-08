@@ -19,4 +19,25 @@
   		WHERE rNum BETWEEN #{param1} AND #{param2}
   	</select>
   	
+  	<!-- DB에 not null로 준 값들을 새로 만듬 없어서 에러났었음 -->
+  	<insert id="write">
+  		INSERT INTO QNA (idx, id, name, content, title)
+  		VALUES (seq_QNA.nextval, #{_id}, #{_name}, #{_content}, #{_title})
+  	</insert>
+  	
+  	<select id="view" resultType="board.BoardDTO"
+  		parameterType="board.ParameterDTO">
+  		SELECT * FROM QNA WHERE idx=#{board_idx}
+  			AND id=#{user_id}
+  	</select>
+  	
+  	<update id="modify" parameterType="board.BoardDTO">
+  		UPDATE QNA
+  			SET name=#{name}, content=#{content}
+  			WHERE idx=#{idx} AND id=#{id}
+  	</update>
+  	
+  	<delete id="delete">
+  		DELETE FROM QNA WHERE idx=#{param1} AND id=#{param2}
+  	</delete>
   </mapper>
