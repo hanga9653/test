@@ -35,7 +35,7 @@ function writeValidate(f)
 	<form name="writeFrm" method="post" 
 		onsubmit="return writeValidate(this);"
 		action="<c:url value="/testboard/modifyAction.do" />" >	
-	<input type="hid den" name="idx" value="${dto.idx }"/>
+	<input type="hid den" name="idx" value="${dto.board_idx }"/>
 	<input type="hid den" name="id" 
 		value="${sessionScope.siteUserInfo.id }"/>
 		
@@ -59,7 +59,7 @@ function writeValidate(f)
 				style="vertical-align:middle;">내용</th>
 			<td>
 				<textarea rows="10" class="form-control" 
-				name="contents">${dto.contents }</textarea>
+				name="contents">${dto.content }</textarea>
 			</td>
 		</tr>	
 	</tbody>

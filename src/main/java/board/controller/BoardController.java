@@ -85,7 +85,7 @@ public class BoardController {
 		ModelAndView mv = new ModelAndView();
 		if(dto == null) {
 			mv.addObject("Error", "아이디/패스워드가 틀렸음");
-			mv.setViewName("07board/login");
+			mv.setViewName("07Board/login");
 			return mv;
 		}
 		else {
@@ -93,7 +93,7 @@ public class BoardController {
 		}
 		String backUrl = req.getParameter("backUrl");
 		if(backUrl == null || backUrl.equals("")) {
-			mv.setViewName("07board/login");
+			mv.setViewName("07Board/login");
 		}
 		else {
 			mv.setViewName(backUrl);
@@ -155,8 +155,11 @@ public class BoardController {
 		if(session.getAttribute("siteUserInfo")==null) {
 			return "redirect:login.do";
 		}
+		System.out.println("된당");
 		int applRow = sqlSession.getMapper(testBoardService.class).delete(req.getParameter("idx"),
 				((testMemberDTO)session.getAttribute("siteUserInfo")).getId());
+		System.out.println(req.getParameter("idx")+"//"+
+		         ((testMemberDTO)session.getAttribute("siteUserInfo")).getId());
 		System.out.println("삭제된행의갯수:"+ applRow);
 		return "redirect:list.do";
 	}
